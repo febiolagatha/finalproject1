@@ -1,0 +1,317 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+US+Modern:wght@100..400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Playwrite+US+Modern:wght@100..400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+US+Modern:wght@100..400&display=swap");
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+#container {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked + #menu-icon + #nav-menu {
+    display: block;
+}
+
+#menu-icon {
+    display: none;
+    flex: 1;
+    padding: 16px;
+    cursor: pointer;
+}
+
+/* #menus {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+} */
+
+nav {
+    display: flex;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-family: "Playwrite US Modern", cursive;
+}
+
+#nav-logo {
+    flex: 2;
+    padding: 16px;
+    padding-left: 40px;
+    font-family: "Playwrite US Modern", cursive;
+}
+
+#nav-menu {
+    flex: 3;
+    text-align: right;
+}
+
+#nav-menu #menus {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+#nav-menu #menus a {
+    color: rgb(20, 20, 20);
+    text-decoration: none;
+    
+}
+
+#nav-menu #menus a:hover {
+    color: gray;
+    text-decoration: underline;
+}
+
+#about {
+    display: flex;
+    padding-top: 40px;
+
+    flex-wrap: wrap;
+}
+
+#about-desc {
+    flex: 1;
+    padding: 40px;
+    font-family: "Playwrite US Modern", cursive;
+}
+
+#about-desc h1 {
+    font-size: 64px;
+
+}
+#about-desc p {
+    font-size: 20px;
+
+}
+#about-image {
+    flex: 1;
+    flex-wrap: wrap;
+    text-align: center;
+}
+#about-image img {
+    width: 80%;
+}
+
+#experiences {
+    padding: 40px;
+    font-family: "Playwrite US Modern", cursive;
+}
+#experiences-title {
+    text-align: center;
+}
+#experiences-items {
+    display: flex;
+
+    flex-wrap: wrap;
+    gap: 20px;
+}
+#experiences-items .item {
+    flex: 1;
+    text-align: center;
+
+    min-width: 250px;
+}
+#experiences-items .item h3{
+    /* flex: 1;
+    text-align: center; */
+    font-size: 14px;
+}
+
+#education {
+    padding-top: 40px;
+    font-family: "Playwrite US Modern", cursive;
+}
+#education-title {
+    text-align: center;
+}
+#education-item {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+
+    min-width: 250px;
+}
+#education-item h1{
+    font-size: 20px;
+}
+#education-item p {
+    font-size: 16px;
+}
+
+#skills {
+    padding: 40px;
+    font-family: "Playwrite US Modern", cursive;
+}
+#skills-title {
+    text-align: center;
+}
+#skills-items {
+    display: flex;
+
+    flex-wrap: wrap;
+    gap: 20px;
+}
+#skills-items .item {
+    flex: 1;
+    text-align: center;
+
+    min-width: 250px;
+}
+#skills-items .item h3{
+    /* flex: 1;
+    text-align: center; */
+    font-size: 14px;
+}
+
+#interests {
+    padding: 40px;
+    font-family: "Playwrite US Modern", cursive;
+}
+#interests-title {
+    text-align: center;
+}
+#interests-items {
+    display: flex;
+
+    flex-wrap: wrap;
+    gap: 20px;
+}
+#interests-items .item {
+    flex: 1;
+    text-align: center;
+
+    min-width: 250px;
+}
+#interests-items .item h3{
+    /* flex: 1;
+    text-align: center; */
+    font-size: 14px;
+}
+
+
+
+#awards {
+    padding: 40px;
+    font-family: "Playwrite US Modern", cursive;
+}
+#awards-title {
+    text-align: center;
+}
+#awards-items {
+    display: flex;
+
+    flex-wrap: wrap;
+    gap: 20px;
+}
+#awards-items .item {
+    flex: 1;
+    text-align: center;
+
+    min-width: 250px;
+}
+
+
+/* screen */
+@media (max-width: 768px) {
+    #nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    #menu-toggle:checked + #nav-menu {
+        display: block;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    #nav-menu #menus {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #nav-menu #menus li {
+        width: 100%;
+        text-align: center;
+    }
+
+    #about-desc h1 {
+        font-size: 48px;
+    }
+
+    #about-desc p {
+        font-size: 16px;
+    }
+
+    #awards-items img {
+        width: 80%;
+    }
+
+    #interests-items img {
+        width: 80%;
+    }
+
+    #education-item img {
+        width: 80%;
+    }
+
+    #about-image img {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    #nav-menu #menus {
+        gap: 20px;
+    }
+
+    #about-desc h1 {
+        font-size: 32px;
+    }
+
+    #about-desc p {
+        font-size: 14px;
+    }
+
+    #about {
+        flex-direction: column;
+    }
+
+    #about-image img {
+        width: 80%;
+        padding-bottom: 400px;
+    }
+
+    #awards-items img {
+        width: 80%;
+    }
+
+    #interests-items img {
+        width: 80%;
+    }
+
+    #education-item img {
+        width: 80%;
+    }
+}
